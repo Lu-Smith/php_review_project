@@ -7,8 +7,9 @@ $dub = 42.02;
 $boo = true;
 $arr = array('a', 'b', 'c');
 define('DAYS_IN_YEAR', 365);
+define('MUGS', 'blue');
 $days = 1;
-$counter = 0;
+
 
 ?>
 <!DOCTYPE html>
@@ -17,33 +18,19 @@ $counter = 0;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Review</title>
 </head>
 <body <?php if ($mode === 'dark'): ?>class="dark"<?php endif ?>>
     <h1>
-       <?php     
-       echo $greeting . " " . $name . "😄" ?>
-    </h1>
-    <p>
-        <?php echo $arr[2]
-        ?>
-        <br />
-        <h2>
-        <?php echo DAYS_IN_YEAR + 1
-        ?>
-        </h2>
-        <br />
-        <h2>
-        <?php 
-        for ($counter = 0; $counter < 11; $counter++) {
-            echo $counter . " ";
-        }
-     
-
-        ?>
-        </h2>
-
-       
-    </p>
+       <?php  
+       $counter = 0;
+       $arr = array("Robert", "Jimmy", "Alice", "Dorothy", "Maggie");
+       while($counter < count($arr)) {
+        echo $arr[$counter] . "<br />";
+        $counter++;
+       }
+       ?>
+    </h1>   
 </body>
 </html>
