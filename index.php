@@ -24,11 +24,9 @@ $days = 1;
 <body <?php if ($mode === 'dark'): ?>class="dark"<?php endif ?>>
     <h1>
        <?php  
-       $counter = 0;
        $arr = array("Robert", "Jimmy", "Alice", "Dorothy", "Maggie");
-       while($counter < count($arr)) {
-        echo $arr[$counter] . "<br />";
-        $counter++;
+       for ($counter = 0; $counter < count($arr); $counter++) {
+          echo $arr[$counter] . "<br />";
        }
        ?>
     </h1>   
