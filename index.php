@@ -23,13 +23,10 @@ $days = 1;
 </head>
 <body <?php if ($mode === 'dark'): ?>class="dark"<?php endif ?>>
     <h1>
-      <?php
-       if ($name === "Luna") {
-        echo "Equall";
-       } else {
-        echo "Not equal";
-       }
-       ?>
+      <?php if ($name === "Luna") { ?>
+       Equall
+       <?php } else { ?>
+        Not equal <?php } ?>
     </h1>   
 </body>
 </html>
