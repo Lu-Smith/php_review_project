@@ -9,6 +9,7 @@ $arr = array('a', 'b', 'c');
 define('DAYS_IN_YEAR', 365);
 define('MUGS', 'blue');
 $days = 1;
+$amount = null;
 
 
 ?>
@@ -23,10 +24,16 @@ $days = 1;
 </head>
 <body <?php if ($mode === 'dark'): ?>class="dark"<?php endif ?>>
     <h1>
-      <?php if ($name === "Luna") { ?>
+      <?php if (gettype($num) === "integer" && $num > 40) { ?>
        Equall
        <?php } else { ?>
         Not equal <?php } ?>
+        <?php if (empty($amount)) {
+            echo $mmessage = "Amount is required";
+        } else {
+            echo "noOOOO";
+        }
+        ?>
     </h1>   
 </body>
 </html>
