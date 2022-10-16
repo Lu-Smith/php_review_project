@@ -23,10 +23,11 @@ $days = 1;
 </head>
 <body <?php if ($mode === 'dark'): ?>class="dark"<?php endif ?>>
     <h1>
-       <?php  
-       $arr = array("Robert", "Jimmy", "Alice", "Dorothy", "Maggie");
-       for ($counter = 0; $counter < count($arr); $counter++) {
-          echo $arr[$counter] . "<br />";
+      <?php
+       if ($name === "Luna") {
+        echo "Equall";
+       } else {
+        echo "Not equal";
        }
        ?>
     </h1>   
