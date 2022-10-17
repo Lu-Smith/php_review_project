@@ -1,11 +1,13 @@
 <?php 
 $mode = "dark";
-print_r($_GET);
-print_r($_POST);
-$firstName = $_GET["firstName"];
-$lastName = $_GET['lastName'];
-echo htmlspecialchars($_GET['firstName']);
-echo htmlspecialchars($_GET['lastName']);
+$firstName = filter_input(INPUT_POST, "firstName", FILTER_SANITIZE_URL);
+$lastName = filter_input(INPUT_POST, "lastName", FILTER_SANITIZE_URL);
+if (!empty($firstName) && !empty($lastName)) {
+    echo $firstName;
+    echo $lastName;
+} else {
+    echo "Missing required data.";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
