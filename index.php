@@ -1,5 +1,11 @@
 <?php 
 $mode = "dark";
+print_r($_GET);
+print_r($_POST);
+$firstName = $_GET["firstName"];
+$lastName = $_GET['lastName'];
+echo $firstName;
+echo $lastName;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,9 +22,9 @@ $mode = "dark";
     </h1> 
     <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="get">
        <label for="firstName">First Name</label>
-       <input type="text" id="first-name" name="firstName" autocomplete="off">
+       <input type="text" id="firstName" name="firstName" autocomplete="off">
        <label for="lastName">Last Name</label>
-       <input type="text" id="last-name" name="lastName" autocomplete="off">
+       <input type="text" id="lastName" name="lastName" autocomplete="off">
        <div class="buttons">
         <button type="submit">Submit</button>
         <button type="submit" formmethod="post">Submit using POST</button>
