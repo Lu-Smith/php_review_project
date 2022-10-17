@@ -2,7 +2,7 @@ footer {
     height: 5vh;
     font-size: 0.6em;
     line-height: 2em;
-    padding: 0.5em;
+    @include flexCenter;
     background-color: $header-bg;
     color: $header-color;
 }
@@ -10,4 +10,11 @@ footer {
 footer a {
     text-decoration: none;
     color: $header-color;
+}
+
+@include mq(786px) {
+    footer {
+    font-size: 0.8em;
+    line-height: 2em;
+    }
 }

@@ -1,16 +1,15 @@
 main {
     height: 85vh;
-    font-size: 0.8em;
-    line-height: 2em;
-    padding: 30px
+    font-size: 0.6em;
+    line-height: 1.8em;
+    padding: 100px 30px;
+    @include flexCenter;
 }
 
 form {
-    display: flex;
+    @include flexCenter;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.2em;
+    font-size: 2em;
     font-family: 'Caveat', cursive;
 
 }
@@ -18,9 +17,9 @@ form {
 input {
     padding: 10px 15px;
     border-radius: 10px;
-    margin: 10px;
+    margin: 8px;
     border: 2px solid $button-bg;
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: 'Caveat', cursive;
 
 }
@@ -29,6 +28,35 @@ button {
     padding: 10px 15px;
     background-color: $button-bg;
     color: $button-color;
-    border-radius: 15px;
-    font-size: 0.8em;
+    border-radius: 12px;
+    font-size: 0.6em;
+}
+
+@include mq(786px) {
+    main {
+        height: 85vh;
+        font-size: 0.8em;
+        line-height: 2em;
+        padding: 30px; 
+        @include flexCenter;
+    }
+    
+    form {
+        font-size: 2.2em;
+        font-family: 'Caveat', cursive;
+    
+    }
+    
+    input {
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin: 10px;
+        font-size: 1.2em;
+    }
+    
+    button {
+        padding: 10px 15px;
+        border-radius: 12px;
+        font-size: 0.8em;
+    }
 }

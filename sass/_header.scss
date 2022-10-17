@@ -1,9 +1,16 @@
 header {
     height: 10vh;
-    font-size: 0.9em;
-    line-height: 2em;
-    padding: 0.8em;
+    font-size: 0.6em;
+    line-height: 1.7em;
+    @include flexCenter;
     background-color: $header-bg;
     color: $header-color;
     font-family: 'Dela Gothic One', cursive;
+}
+
+@include mq(786px) {
+    header {
+    font-size: 0.9em;
+    line-height: 2em;
+    }
 }
