@@ -4,8 +4,8 @@ print_r($_GET);
 print_r($_POST);
 $firstName = $_GET["firstName"];
 $lastName = $_GET['lastName'];
-echo $firstName;
-echo $lastName;
+echo htmlspecialchars($_GET['firstName']);
+echo htmlspecialchars($_GET['lastName']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
