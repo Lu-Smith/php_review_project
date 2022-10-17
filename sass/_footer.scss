@@ -10,6 +10,7 @@ footer {
 footer a {
     text-decoration: none;
     color: $header-color;
+    margin-left: 5px;
 }
 
 @include mq(786px) {

@@ -1,6 +1,11 @@
-@mixin imgSize {
+@mixin imgSmallSize {
     width: 300px;
     height: 400px;
+}
+
+@mixin imgBigSize {
+    width: 600px;
+    height: 700px;
 }
 
 @mixin flexCenter {
