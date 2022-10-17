@@ -1,17 +1,5 @@
 <?php 
 $mode = "dark";
-$greeting = "Hello";
-$name = "Luna";
-$num = 42;
-$dub = 42.02;
-$boo = true;
-$arr = array('a', 'b', 'c');
-define('DAYS_IN_YEAR', 365);
-define('MUGS', 'blue');
-$days = 1;
-$amount = null;
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,16 +12,13 @@ $amount = null;
 </head>
 <body <?php if ($mode === 'dark'): ?>class="dark"<?php endif ?>>
     <h1>
-      <?php if (gettype($num) === "integer" && $num > 40) { ?>
-       Equall
-       <?php } else { ?>
-        Not equal <?php } ?>
-        <?php if (empty($amount)) {
-            echo $mmessage = "Amount is required";
-        } else {
-            echo "noOOOO";
-        }
-        ?>
-    </h1>   
+      Web Form
+    </h1> 
+    <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="get">
+       <label for="firstName">First Name</label>
+       <input type="text" id="first-name" name="firstName" autocomplete="off">
+       <label for="lastName">Last Name</label>
+       <input type="text" id="last-name" name="lastName" autocomplete="off">
+    </form>  
 </body>
 </html>
