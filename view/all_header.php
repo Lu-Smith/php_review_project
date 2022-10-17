@@ -8,8 +8,7 @@
                  include('./view/greetings/main_header.php');
               } 
           } else {
-              echo "Not set!";
+              include('./view/greetings/main_header.php');
           }
-
     ?>
 </header>

@@ -13,10 +13,10 @@ $mode = "dark";
 </head>
 <body <?php if ($mode === 'dark'): ?>class="dark"<?php endif ?>>
     <?php
-     include('./view/alt_header.php');
+     include('./view/all_header.php');
     ?> 
     <?php
-     include('./view/main.php');
+     include('./view/all_main.php');
     ?> 
     <?php
      include('./view/footer.php');
