@@ -19,6 +19,11 @@ $mode = "dark";
        <input type="text" id="first-name" name="firstName" autocomplete="off">
        <label for="lastName">Last Name</label>
        <input type="text" id="last-name" name="lastName" autocomplete="off">
+       <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="submit" formmethod="post">Submit using POST</button>
+        <button type="reset">Reset</button>
+       </div>
     </form>  
 </body>
 </html>
