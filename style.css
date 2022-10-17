@@ -8,6 +8,29 @@ body
     color: white;
 }
 
+header {
+    height: 10vh;
+    font-size: 28px;
+    line-height: 35px;
+}
+
+main {
+    height: 85vh;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+footer {
+    height: 5vh;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
 form {
     display: flex;
     flex-direction: column;

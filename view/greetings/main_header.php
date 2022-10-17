@@ -1,1 +1,1 @@
-<header>Hello Stranger</header>
+<h1>Hello, stranger 🌞</h1>
