@@ -1,12 +1,24 @@
 <?php 
 $mode = "dark";
-$firstName = filter_input(INPUT_POST, "firstName", FILTER_SANITIZE_URL);
+/* $firstName = filter_input(INPUT_POST, "firstName", FILTER_SANITIZE_URL);
 $lastName = filter_input(INPUT_POST, "lastName", FILTER_SANITIZE_URL);
 if (!empty($firstName) && !empty($lastName)) {
     echo $firstName;
     echo $lastName;
 } else {
     echo "Missing required data.";
+} */
+if (isset($_GET['firstName']) && isset($_GET['lastName'])) {
+    $firstName = $_GET['firstName'];
+    $lastName = $_GET['lastName'];
+    if (!empty($firstName) && !empty($lastName)) {
+        echo htmlspecialchars($firstName);
+        echo htmlspecialchars($lastName);
+    } else {
+        echo "Missing required data.";
+    } 
+} else {
+    echo "Not set!";
 }
 ?>
 <!DOCTYPE html>
