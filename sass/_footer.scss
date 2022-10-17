@@ -1,10 +1,13 @@
 footer {
     height: 5vh;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 0.6em;
+    line-height: 0.5em;
+    padding: 1.4em;
+    background-color: $header-bg;
+    color: $header-color;
 }
 
 footer a {
     text-decoration: none;
-    color: white;
+    color: $header-color;
 }
