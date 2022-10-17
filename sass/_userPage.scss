@@ -11,7 +11,13 @@ h2 {
     margin-bottom: 40px;
 }
 
+.container {
+    @include flexCenter;
+    flex-direction: column;
+}
+
 .cards {
+  margin: 10px;
   @include imgSmallSize;
   background-color: transparent;
   position: relative;
@@ -21,7 +27,7 @@ h2 {
 
 .cards:hover,
 .cards:focus {
-    transform: rotateY('180deg');
+    transform: rotateY(180deg);
 }
 
 .card-front,
@@ -33,6 +39,7 @@ h2 {
     height: 100%;
     backface-visibility: hidden;
     box-shadow: $shadow;
+    border-radius: 5px;
 }
 
 .card-front {
@@ -44,11 +51,14 @@ h2 {
 .card-back {
     background-color: $header-color;
     color: $header-bg;
-    transform: rotateY('180deg');
+    transform: rotateY(180deg);
     @include flexCenter;
 }
 
 @include mg(786px) {
+    .container {
+        flex-direction: row;
+    }
     .cards {
         @include imgBigSize;
       }
