@@ -1,16 +1,8 @@
 <?php 
 $mode = "dark";
-/* $firstName = filter_input(INPUT_POST, "firstName", FILTER_SANITIZE_URL);
-$lastName = filter_input(INPUT_POST, "lastName", FILTER_SANITIZE_URL);
-if (!empty($firstName) && !empty($lastName)) {
-    echo $firstName;
-    echo $lastName;
-} else {
-    echo "Missing required data.";
-} */
-if (isset($_GET['firstName']) && isset($_GET['lastName'])) {
-    $firstName = $_GET['firstName'];
-    $lastName = $_GET['lastName'];
+if (isset($_POST['firstName']) && isset($_POST['lastName'])) {
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
     if (!empty($firstName) && !empty($lastName)) {
         echo htmlspecialchars($firstName);
         echo htmlspecialchars($lastName);
@@ -31,19 +23,15 @@ if (isset($_GET['firstName']) && isset($_GET['lastName'])) {
     <title>Review</title>
 </head>
 <body <?php if ($mode === 'dark'): ?>class="dark"<?php endif ?>>
-    <h1>
-      Web Form
-    </h1> 
-    <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="get">
-       <label for="firstName">First Name</label>
-       <input type="text" id="firstName" name="firstName" autocomplete="off">
-       <label for="lastName">Last Name</label>
-       <input type="text" id="lastName" name="lastName" autocomplete="off">
-       <div class="buttons">
-        <button type="submit">Submit</button>
-        <button type="submit" formmethod="post">Submit using POST</button>
-        <button type="reset">Reset</button>
-       </div>
-    </form>  
+    <?php
+     include('./view/header.php');
+    ?> 
+    <?php
+     include('./view/main.php');
+    ?> 
+    <?php
+     include('./view/footer.php');
+    ?> 
+  
 </body>
 </html>
