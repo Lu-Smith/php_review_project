@@ -1,5 +1,4 @@
 main {
-    height: 85vh;
     font-size: 0.8em;
     line-height: 2em;
     padding: 30px;
@@ -40,19 +39,11 @@ h2 {
     backface-visibility: hidden;
     box-shadow: $shadow;
     border-radius: 5px;
-}
-
-.card-front {
-    background-color: $card-bg;
-    color: $header-color;
-    @include flexCenter;
+    @include imgSmallSize;
 }
 
 .card-back {
-    background-color: $header-color;
-    color: $header-bg;
     transform: rotateY(180deg);
-    @include flexCenter;
 }
 
 @include mg(786px) {
@@ -61,5 +52,9 @@ h2 {
     }
     .cards {
         @include imgBigSize;
+      }
+      .card-front,
+      .card-back {
+          @include imgBigSize;
       }
 }
