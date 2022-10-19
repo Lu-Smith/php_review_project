@@ -1,62 +1,108 @@
 main {
     height: 85vh;
     font-size: 0.6em;
-    line-height: 1.8em;
-    padding: 100px 30px;
+    line-height: 1em;
     @include flexCenter;
+    flex-direction: column;
 }
 
 h2 {
-    margin-bottom: 40px;
+    position: relative;
+    bottom: 300px;
 }
 
 .container {
     @include flexCenter;
     flex-direction: column;
-    width: 80%;
-    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 300px;
 }
 
 .cards {
-  margin: 10px;
-  @include imgSmallSize;
-  background-color: transparent;
-  position: relative;
-  transition: transform 0.6s ease-in-out;
-  transform-style: preserve-3d;
-}
-
-.cards:hover,
-.cards:focus {
-    transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    box-shadow: $shadow;
-    border-radius: 5px;
-    @include imgSmallSize;
+    margin: 10px;
+    position: relative;
+
 }
 
-.card-back {
+.first-img {
+    @include imgSmallSize;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    box-shadow: $shadow;
+    
+    border-radius: 50%;    
+    
+}
+
+.second-img {
+    @include imgSmallSize;
+    position: absolute;
+    left: 20px;
+    top: 310px;
+    box-shadow: $shadow;
+    
+    border-radius: 50%;    
+    
+}
+
+.card-front {
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card-front:focus,
+.card-front:hover {
     transform: rotateY(180deg);
 }
 
 @include mq(786px) {
-    .container {
-        flex-direction: row;
+    h2 {
+        position: relative;
+        bottom: 320px;
     }
+    
+    .container {
+        @include flexCenter;
+        flex-direction: row;
+        width: 80%;
+        position: relative;
+        bottom: 300px;
+    }
+    
     .cards {
+        width: 50%;
+        margin: 10px;
+        position: relative;
+    
+    }
+    
+    img {
         @include imgBigSize;
-      }
-      .card-front,
-      .card-back {
-          @include imgBigSize;
-      }
+        position: absolute;
+        left: 50px;
+        top: 30px;
+        box-shadow: $shadow;
+        
+        border-radius: 50%;    
+        
+    }
+    
+    .card-front {
+        backface-visibility: hidden;
+        transition: transform 0.6s ease-in-out;
+        transform-style: preserve-3d;
+    }
+    
+    .card-front:focus,
+    .card-front:hover {
+        transform: rotateY(180deg);
+    }
 }
+
+
+
+
