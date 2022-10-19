@@ -1,9 +1,9 @@
 main {
-    font-size: 0.8em;
-    line-height: 2em;
-    padding: 30px;
+    height: 85vh;
+    font-size: 0.6em;
+    line-height: 1.8em;
+    padding: 100px 30px;
     @include flexCenter;
-    flex-direction: column;
 }
 
 h2 {
@@ -13,6 +13,8 @@ h2 {
 .container {
     @include flexCenter;
     flex-direction: column;
+    width: 80%;
+    padding: 20px;
 }
 
 .cards {
