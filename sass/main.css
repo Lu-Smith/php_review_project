@@ -132,42 +132,31 @@ main {
 }
 
 h2 {
-  position: relative;
-  bottom: 300px;
+  margin-bottom: 10px;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
   width: 100%;
-  position: relative;
-  bottom: 300px;
 }
 
 .cards {
-  width: 100%;
+  width: 300px;
+  height: 300px;
   margin: 10px;
   position: relative;
 }
 
-.first-img {
+.first-img, .second-img {
   width: 300px;
   height: 300px;
   position: absolute;
-  left: 5%;
-  top: 20px;
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-}
-
-.second-img {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: 5%;
-  top: 310px;
+  left: 0px;
+  top: 0px;
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
 }
@@ -184,21 +173,51 @@ h2 {
   transform: rotateY(180deg);
 }
 
-@media only screen and (min-width: 786px) {
-  h2 {
-    position: relative;
-    bottom: 320px;
+@media only screen and (min-width: 820px) {
+  main {
+    font-size: 0.8em;
+    line-height: 1.2em;
   }
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
-    bottom: 300px;
+  h2 {
+    margin-bottom: 10px;
   }
   .cards {
-    width: 50%;
+    width: 450px;
+    height: 450px;
+    margin: 10px;
+    position: relative;
+  }
+  .first-img, .second-img {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+  .card-front {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  .card-front:focus,
+.card-front:hover {
+    transform: rotateY(180deg);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    font-size: 0.8em;
+    line-height: 1.2em;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  .cards {
+    width: 600px;
+    height: 600px;
     margin: 10px;
     position: relative;
   }
@@ -206,8 +225,8 @@ h2 {
     width: 600px;
     height: 600px;
     position: absolute;
+    left: 0px;
     top: 0px;
-    left: 15%;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
   }

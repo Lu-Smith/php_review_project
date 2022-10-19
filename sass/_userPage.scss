@@ -7,39 +7,28 @@ main {
 }
 
 h2 {
-    position: relative;
-    bottom: 300px;
+    margin-bottom: 10px;
 }
 
 .container {
     @include flexCenter;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
     width: 100%;
-    position: relative;
-    bottom: 300px;
 }
 
 .cards {
-    width: 100%;
+    @include imgSmallSize;
     margin: 10px;
     position: relative;
 
 }
 
-.first-img {
+.first-img, .second-img {
     @include imgSmallSize;
     position: absolute;
-    left: 5%;
-    top: 20px;
-    box-shadow: $shadow;
-    border-radius: 50%;    
-}
-
-.second-img {
-    @include imgSmallSize;
-    position: absolute;
-    left: 5%;
-    top: 310px;
+    left: 0px;
+    top: 0px;
     box-shadow: $shadow;
     border-radius: 50%;    
 }
@@ -56,31 +45,28 @@ h2 {
 }
 
 
-@include mq(786px) {
-    h2 {
-        position: relative;
-        bottom: 320px;
+@include mq(820px) {
+    main {
+        font-size: 0.8em;
+        line-height: 1.2em;
     }
     
-    .container {
-        @include flexCenter;
-        flex-direction: row;
-        position: relative;
-        bottom: 300px;
+    h2 {
+        margin-bottom: 10px;
     }
     
     .cards {
-        width: 50%;
+        @include imgMediumSize;
         margin: 10px;
         position: relative;
     
     }
     
     .first-img, .second-img {
-        @include imgBigSize;
+        @include imgMediumSize;
         position: absolute;
+        left: 0px;
         top: 0px;
-        left: 15%;
         box-shadow: $shadow;
         border-radius: 50%;    
     }
@@ -97,6 +83,43 @@ h2 {
     }
 }
 
+@include mq(1200px) {
+    main {
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+    
+    h2 {
+        margin-bottom: 10px;
+    }
+    
+    .cards {
+        @include imgBigSize;
+        margin: 10px;
+        position: relative;
+    
+    }
+    
+    .first-img, .second-img {
+        @include imgBigSize;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        box-shadow: $shadow;
+        border-radius: 50%;    
+    }
+    
+    .card-front {
+        backface-visibility: hidden;
+        transition: transform 0.6s ease-in-out;
+        transform-style: preserve-3d;
+    }
+    
+    .card-front:focus,
+    .card-front:hover {
+        transform: rotateY(180deg);
+    }
+}
 
 
 
