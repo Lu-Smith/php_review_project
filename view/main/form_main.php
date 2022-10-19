@@ -6,6 +6,4 @@
         <button type="submit">Submit</button>
        </div>
     </form>  
-    <h2>
-    </h2>
 </main>

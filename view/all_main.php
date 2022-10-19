@@ -1,5 +1,4 @@
-<main>
-    <?php
+<?php
       if (isset($_POST['firstName'])) {
         $firstName = $_POST['firstName'];
         if (!empty($firstName)) {
@@ -10,5 +9,4 @@
     } else {
         include('./view/main/form_main.php');
     }
-    ?>
-</main>
+?>
