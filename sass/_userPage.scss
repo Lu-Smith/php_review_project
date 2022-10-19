@@ -29,23 +29,19 @@ h2 {
 .first-img {
     @include imgSmallSize;
     position: absolute;
-    left: 20px;
+    left: 5%;
     top: 20px;
     box-shadow: $shadow;
-    
     border-radius: 50%;    
-    
 }
 
 .second-img {
     @include imgSmallSize;
     position: absolute;
-    left: 20px;
+    left: 5%;
     top: 310px;
     box-shadow: $shadow;
-    
     border-radius: 50%;    
-    
 }
 
 .card-front {
@@ -59,6 +55,7 @@ h2 {
     transform: rotateY(180deg);
 }
 
+
 @include mq(786px) {
     h2 {
         position: relative;
@@ -68,7 +65,6 @@ h2 {
     .container {
         @include flexCenter;
         flex-direction: row;
-        width: 80%;
         position: relative;
         bottom: 300px;
     }
@@ -80,15 +76,13 @@ h2 {
     
     }
     
-    img {
+    .first-img, .second-img {
         @include imgBigSize;
         position: absolute;
-        left: 50px;
-        top: 30px;
+        top: 0px;
+        left: 15%;
         box-shadow: $shadow;
-        
         border-radius: 50%;    
-        
     }
     
     .card-front {
