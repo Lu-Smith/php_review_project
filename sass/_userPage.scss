@@ -48,7 +48,7 @@ h2 {
     transform: rotateY(180deg);
 }
 
-@include mg(786px) {
+@include mq(786px) {
     .container {
         flex-direction: row;
     }
