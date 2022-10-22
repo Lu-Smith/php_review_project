@@ -12,6 +12,7 @@ h2 {
 }
 
 .container {
+    margin-top: 150px;
     @include flexCenter;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -54,6 +55,10 @@ h2 {
     
     h2 {
         margin-bottom: 10px;
+    }
+
+    .container {
+        margin-top: 0;
     }
     
     .cards {
