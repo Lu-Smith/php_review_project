@@ -1,16 +1,16 @@
 @mixin imgSmallSize {
+    width: 200px;
+    height: 200px;
+}
+
+@mixin imgMediumSize {
     width: 300px;
     height: 300px;
 }
 
-@mixin imgMediumSize {
-    width: 450px;
-    height: 450px;
-}
-
 @mixin imgBigSize {
-    width: 600px;
-    height: 600px;
+    width: 400px;
+    height: 400px;
 }
 
 @mixin flexCenter {

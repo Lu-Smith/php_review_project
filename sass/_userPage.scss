@@ -4,6 +4,7 @@ main {
     line-height: 1em;
     @include flexCenter;
     flex-direction: column;
+    overflow: scroll;
 }
 
 h2 {
